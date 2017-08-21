@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "csscomb": "find . -name 'src/*.css' | xargs node_modules/csscomb/bin/csscomb",
-    "deploy:prod": "node_modules/shipit-cli/bin/shipit prod deploy"
+    "deploy:prod": "node_modules/shipit-cli/bin/shipit prod deploy",
+    "build:prod": "node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
