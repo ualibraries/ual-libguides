@@ -1,12 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function() {
   // Remove links from profile images
-  $("img[src*='profiles']").unwrap();
+  $('.s-lib-profile-container img').unwrap();
 
   // Replace profile box title with "Your librarian"
   $("div[id*='profile_box'] > h2").contents().replaceWith("Your librarian");
 
   // remove empty p tags inserted after hr
-  $("hr + p").filter( function() {
+  $("hr + p").filter(function() {
     return $.trim($(this).html()) == ' ';
   }).remove();
 

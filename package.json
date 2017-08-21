@@ -22,6 +22,8 @@
   "dependencies": {
     "csscomb": "^4.2.0",
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "localtunnel": "^1.8.3",
     "shipit-cli": "^3.0.0",
     "shipit-deploy": "^2.5.1",
     "yargs": "^8.0.2"
