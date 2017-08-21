@@ -4,6 +4,24 @@
 
 Run `npm install`
 
+### What's here:
+
+```sh
+.
+├── .csscomb.json # CSSComb settings
+├── .editorconfig # Editorconfig settings
+├── .gitignore
+├── .travis.yml # Travis CI settings
+├── LICENSE
+├── README.md
+├── dist # Where build artifacts go. Don't edit these directly
+├── gulpfile.js # Gulp config
+├── package-lock.json
+├── package.json
+├── shipitfile.js # Shipit deployment settings
+└── src # Source files. You should edit these
+```
+
 ## Scripts
 
 `% npm run build:prod` - Builds the project (the build goes into the `dist` directory).
