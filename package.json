@@ -21,6 +21,8 @@
   "dependencies": {
     "csscomb": "^4.2.0",
     "gulp": "^3.9.1",
-    "shipit": "^1.0.2"
+    "shipit": "^1.0.2",
+    "shipit-cli": "^3.0.0",
+    "yargs": "^8.0.2"
   }
 }
