@@ -14,7 +14,7 @@ Run `npm install`
 
 ## LibGuides settings
 
-## System wide
+### System wide
 
 In ['Admin' -> 'Look & Feel' -> 'Custom JS/CSS'](https://arizona.libapps.com/libguides/lookfeel.php), paste the following:
 
@@ -24,6 +24,6 @@ In ['Admin' -> 'Look & Feel' -> 'Custom JS/CSS'](https://arizona.libapps.com/lib
 <script src="http://www.library.arizona.edu/vendor-support/libguides/current/dist/ual-scripts.js" type="text/javascript"></script>
 ```
 
-## Groups
+### Groups
 
 Groups can be edited in 'Admin' -> 'Groups'. Edit a group's JS/CSS settings by choosing the 'Edit' icon for the specific group and going to 'Custom JS/CSS Code'.
