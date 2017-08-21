@@ -13,7 +13,7 @@ module.exports = function (shipit) {
 
   shipit.initConfig({
     default: {
-      workspace: '/tmp/ual-libcal',
+      workspace: '/tmp/ual-libguides',
       deployTo: '/data1/mainsite/vendor-support/libguides',
       repositoryUrl: 'https://github.com/ualibraries/ual-libguides.git',
       ignores: ['.git', 'node_modules'],
