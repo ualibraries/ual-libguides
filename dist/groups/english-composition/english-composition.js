@@ -8,7 +8,7 @@
 $(document).ready(function(){
 
   // Remove links from profile images
-  $('.s-lib-profile-container img').unwrap();
+  $('.s-lib-profile-image').unwrap();
 
   // Replace profile box title with "Your librarian"
   $("div[id*='profile_box'] > h2").contents().replaceWith("Your librarian");
