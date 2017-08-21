@@ -1,0 +1,363 @@
+/**
+ * Guide-level styling for UAL LibGuides groups.
+ *
+ * This styling encourages narrative guides by removing boxes and increasing the
+ * prominence of box titles so that they read as headings.
+ *
+ * Attempts to implement http://www.modularscale.com/?16,12&px&1.5&web&text
+ * over bootstrap.
+ */
+
+/* layout, boxes, and navigation */
+
+body.s-lg-guide-body {
+  font-size: 16px;
+  background-color: #cccccc;
+  color: #333333;
+  line-height: 1.668em;
+}
+
+.container {
+  background-color: #ffffff;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.s-lib-box {
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+  margin: 0;
+}
+
+.s-lib-box-content {
+  padding: 0;
+}
+
+.s-lg-tab-content .s-lib-box-content {
+  padding: 0 1.125em;
+}
+
+.s-lib-box .s-lib-box-title {
+  color: inherit;
+  font-size: 1.668em; /* 27px h2 */
+  background: transparent;
+  border-bottom: none;
+  font-weight: normal;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: .592em;
+}
+
+#s-lg-tabs-container {
+  padding-top: 0;
+}
+#s-lg-tabs-container .margin-top-med {
+  margin-top: 0 !important;
+}
+
+#s-lg-guide-tabs-title-bar {
+  border-top: 0;
+}
+
+/* Guide list on the group homepage */
+#s-lg-index-list {
+  margin-top: 1em;
+}
+
+#s-lg-index-list .s-lib-box {
+  padding: 1em 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Profile box */
+
+.s-lib-profile-div {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* balance the left visual padding for the guide in multicolumn layout */
+@media (min-width: 992px) {
+  /* allow the left column to shrink if there are no tabs */
+  .col-md-3 {
+    width: auto;
+    max-width: 25%;
+  }
+  .col-md-3 .s-lib-box-container,
+  #s-lg-guide-name,
+  .nav-pills {
+    padding-left: 15px;
+  }
+}
+
+
+/**
+ * Set the size for box titles in the left column of side-tabbed guides. We use
+ * this for profile boxes but sometimes related things appear in this area too.
+ * This would affect AHSL if they chose to make a guide using side tabs.
+ */
+.s-lg-tabs-side .s-lib-box-title {
+  font-size: 1.125em; /* 28px h4 */
+}
+
+/* make room for the email button in non-side-tab-only guides */
+[id^='s-lib-profile-contact'],
+.s-lg-tabs-side .s-lib-box-content {
+  margin-bottom: 2.25em;
+}
+
+.s-lg-tabs-side [id^='s-lib-profile-contact'] {
+  margin-bottom: 0;
+}
+
+/* separate additional boxes in the side column in proportion to the nav-pills */
+.s-lg-tabs-side .s-lg-col-boxes > div {
+  margin-top: 2.531em;
+}
+
+/* because of positioning for the email link, we need a clearfix on side tabs divs */
+.s-lg-tabs-side > div:after {
+  display: table;
+  content: ' ';
+  clear: both;
+}
+
+.s-lib-profile-image {
+  margin-bottom: .667em;
+}
+
+.s-lib-profile-name {
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: bold;
+  color: #444444; /* strong */
+}
+
+.s-lib-profile-contact strong,
+.s-lib-profile-social strong {
+  display: none;
+}
+
+.s-lib-profile-email {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.label-info {
+  background-color: #6a80a4;
+  border-radius: .269em;
+  padding: .5em .75em;
+  font-size: inherit !important;
+}
+
+[id^='s-lib-profile'].s-lib-profile-email a,
+[id^='s-lib-profile'].s-lib-profile-email a:hover,
+[id^='s-lib-profile'].s-lib-profile-email a:focus {
+  color: #ffffff;
+}
+
+.s-lib-box-content a.label-info {
+  text-decoration: none;
+}
+
+.label-info[href]:hover,
+.label-info[href]:focus {
+  background-color: #4f668b;
+}
+
+.s-lib-profile-image img {
+  box-shadow: none;
+  border-color: #eeeeee;
+  max-width: 136px;
+}
+
+/* Bring sidebar boxes next to profile in the sidebar at a medium screen size. */
+@media (min-width: 550px) and (max-width: 992px) {
+  .s-lg-tabs-side [id^='s-lg-box-profile'],
+  .s-lg-tabs-side .s-lg-col-boxes .s-lib-box-container {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* header */
+
+#s-lg-guide-header-info h1 {
+  margin-top: 1em;
+}
+
+#s-lg-guide-name {
+  font-size: 1.668em; /* 27px h1 */
+  display: block;
+  margin-top: .889em;
+  margin-bottom: .667em;
+}
+
+#s-lg-guide-desc-container {
+  padding-top: 0;
+  padding-left: 15px;
+  margin-top: .75em;
+  margin-bottom: .5em;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  #s-lg-guide-desc-container {
+    padding-left: 0;
+  }
+}
+
+/* guide content */
+
+p {
+  margin: .75em 0;
+}
+
+b,
+strong {
+  color: #444444;
+}
+
+ul, 
+ol {
+  padding-left: 2.25em;
+}
+
+td {
+  padding: 10px;
+}
+
+.s-lib-box-content a,
+.s-lib-footer a,
+#s-lg-public-footer-custom a {
+  color: #5376b6;
+  text-decoration: underline;
+}
+
+.s-lib-box-content a:hover,
+.s-lib-footer a:hover,
+#s-lg-public-footer-custom a:hover,
+.s-lib-box-content a:visited,
+.s-lib-footer a:visited,
+#s-lg-public-footer-custom a:visited {
+  color: #14495b;
+}
+
+ul li p {
+  margin: 0; /* account for incorrect list item markup */
+}
+
+#s-lg-guide-description {
+  font-size: inherit; /* p */
+  line-height: inherit;
+}
+
+:first-child,
+p:first-of-type {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.5em; /* h3 in the WYSIWYG */
+}
+
+h4 {
+  font-size: 1.125em; /* h4 in the WYSIWYG */
+}
+
+h5 {
+  font-size: 1em; /* h5 in the WYSIWYG */
+  font-weight: bold;
+  color: #444444;
+}
+
+ul.s-lg-link-list {
+  margin-top: 0;
+  margin-bottom: .75em; /* p */
+}
+
+.s-lg-link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.s-lg-link-list li {
+  padding-top: 0;
+  margin-bottom: .75em; /* p */
+  margin-top: 1.125em;
+}
+
+.s-lg-tn {
+  margin-left: 0;
+}
+
+/* Matches s-lg-book-cover-img-0 */
+.s-lg-tn img {
+  width: 90px;
+}
+
+/* Overrides an !important in springshare.common.min.css */
+.s-lg-tn .margin-right-sm {
+  margin-right: 10px!important;
+}
+
+/* book lists */
+ul.s-lg-link-list-5 {
+  padding-left: 0;
+}
+
+.s-lg-book-title {
+  font-weight: inherit;
+}
+
+.s-lg-file-icon {
+  background-position: right -60px !important;
+  padding-right: 28px;
+}
+
+.s-lg-file-icon a {
+  margin-left: 0 !important;
+}
+
+#s-lg-tabs-container .nav-tabs {
+  font-size: 80%;
+}
+
+#s-lg-tabs-container .nav-tabs a {
+  padding: 4px 10px;
+}
+
+/* footer */
+
+#s-lib-footer-public {
+  background-color: #f5f5f5;
+  border-top: 1.668em solid #ffffff;
+  padding: 0;
+}
+
+#s-lg-public-footer-custom {
+  padding: 15px;
+  background-color: #eeeeee;
+}
+
+#s-lg-public-footer-custom ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#s-lg-public-footer-custom li {
+  display: inline-block;
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+#s-lg-public-footer-custom ul:first-child li {
+  border-right: 1px solid #cccccc;
+}
+
+#s-lg-public-footer-custom ul:first-child li:last-child {
+  border: none;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ual-libguides",
+  "version": "1.0.0",
+  "description": "The University of Arizona LibGuides customizations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "csscomb": "find . -name 'src/*.css' | xargs node_modules/csscomb/bin/csscomb",
+    "deploy:prod": "node_modules/shipit-cli/bin/shipit prod deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ualibraries/ual-libguides.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ualibraries/ual-libguides/issues"
+  },
+  "homepage": "https://github.com/ualibraries/ual-libguides#readme",
+  "dependencies": {
+    "csscomb": "^4.2.0",
+    "gulp": "^3.9.1",
+    "shipit": "^1.0.2"
+  }
+}

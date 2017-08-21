@@ -1,0 +1,691 @@
+/**
+ * University of Arizona Libraries LibApps 2.0 custom styles
+ *
+ * This stylesheet applies to our LibAnswers installation and also at the
+ * system-level in LibGuides.
+ */
+
+/**
+ * Reset browser stylesheet padding and margin
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Styles that apply in both systems
+ */
+html {
+  font-size: 100%;
+}
+
+/* Use a gray background with a white container everywhere except guide pages */
+
+body[class^='s-lib'],
+body[class^='s-la'] {
+  background-color: #cccccc;
+  padding: 0;
+}
+
+body[class^='s-lib'] .container,
+body[class^='s-la'] .container {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+/**
+* Main UA Banner
+*/
+
+.ua-web-branding-banner {
+  width: 100%;
+  color: #ffffff;
+  background-color: #999999;
+}
+
+.ua-web-branding-banner .ua-home {
+  display: block;
+  /* float: left; */
+  height: 25px;
+  width: 275px;
+  background-repeat: no-repeat;
+  background-position: 10px 0;
+  background-image: url('assets/images/university-of-arizona-logo-white.svg');
+  /* overflow: hidden; */
+  text-indent: -9999999px;
+}
+
+.ua-web-branding-banner .ua-home:focus {
+  background-color: #555555;
+}
+
+/**
+ * LibGuides Banners for UAL, AHSL, AHSL-Phx, and LibAnswers
+ */
+.ualib-banner.container {
+  min-height: 120px;
+  clear: both;
+  position: relative;
+  border-bottom: solid 3px #40649e;
+  background-color: #2483bb;
+}
+
+@media (min-width: 36em) {
+  .ualib-banner.container {
+    height: 135px;
+  }
+}
+
+body[class^='s-lib'] .ualib-banner.container,
+.ualib-banner.container,
+.ualib-banner.container.ualib-banner--ahsl,
+.ualib-banner.container.ualib-banner--ahsl-phx {
+  background-color: #2483bb;
+  padding: 0;
+}
+
+.ualib-banner.ualib-banner--mainlib {
+  font-size: 16px;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+  clear: both;
+  background-color: #227db2 !important;
+}
+
+.ua-logo {
+  position: relative;
+  float: left;
+}
+
+.ualib-banner .ua-logo a {
+  display: block;
+  background-repeat: no-repeat;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Main Library LibGuides Logo */
+
+.ualib-banner.container .logo {
+  /* float: left; */
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  margin-top: -12px;
+  clear: both;
+}
+
+.logo__ua-library {
+  display: block;
+  position: relative;
+  width: 215px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-position: 0 -66px;
+  background-size: 315px;
+  z-index: 2;
+  background-image: url('assets/images/ua-libraries-logo-updated.png');
+  overflow: hidden;
+}
+
+@media (min-width: 36em) {
+  .logo__ua-library {
+    background-position: 0 -1px;
+    width: 320px;
+    /* height: 58px; */
+  }
+  .ua-web-branding-banner .ua-home {
+    background-position: 10px 0;
+  }
+}
+
+@media (min-width: 49em) {
+  .logo__ua-library {
+    margin: 0;
+    top: 0;
+  }
+}
+
+/* AHSL LibGuides Logo */
+.ualib-banner .ahsl-phx-logo {
+  top: 28px;
+}
+
+.logo__ahsl-logo {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+  background-size: 300px;
+  z-index: 2;
+  background-image: url('assets/images/HSL-new-r.png');
+  /* -webkit-background-size: 350px; */
+  background-size: 300px;
+  overflow: hidden;
+}
+
+@media (min-width: 36em) {
+  .logo__ahsl-logo {
+    background-position: 0 0;
+    width: 365px;
+    height: 55px;
+    background-size: 355px;
+  }
+  .ualib-banner.container .logo {
+    margin-top: -28px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .logo__ahsl-logo {
+    margin: 0;
+    top: 50%;
+  }
+  .ualib-banner.container .logo {
+    margin-top: -14px;
+  }
+
+  .ahsl-header-links {
+    display: block;
+  }
+}
+
+.ualib-banner .ahsl-phx-logo a {
+  width: 430px;
+  height: 75px;
+  background-image: url('assets/images/ahslphx-w-block-a-logo-2x.png');
+  -webkit-background-size: 430px;
+          background-size: 430px;
+}
+
+.ualib-banner .logo a:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+.ualib-banner h1 {
+  position: absolute;
+  top: -9999px;
+}
+
+/* Ask Us - Chat */
+html #libchat_07713bc057f66ebcdccd4dd1b4a2be3e button {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  white-space: normal;
+  vertical-align: baseline;
+  cursor: auto;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+}
+
+html #libchat_07713bc057f66ebcdccd4dd1b4a2be3e button.libchat_online,
+html #libchat_07713bc057f66ebcdccd4dd1b4a2be3e button.libchat_offline {
+  background-color: transparent;
+  color: inherit;
+}
+
+.libapps-buttons {
+  background-color: #637799;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.libapps-menu {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.libapps-menu-item {
+  display: inline-block;
+  text-align: center;
+  border-left: none;
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+.libapps-menu-item a {
+  color: #ffffff;
+}
+
+.libapps-buttons .libanswers-button,
+.libapps-buttons .libchat_online,
+.libapps-buttons .libchat_offline {
+  display: inline-block;
+  padding: 0 15px;
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  transition-property: color,background-color,border;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+.libapps-buttons .libanswers-button:hover,
+.libapps-buttons .libchat_online:hover,
+.libapps-buttons .libchat_offline:hover {
+  background-color: #4f5f7a !important;
+}
+
+.libapps-buttons .libanswers-button:before,
+.libapps-buttons .libchat_online:before,
+.libapps-buttons .libchat_offline:before {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2226%22%20height%3D%22108%22%20viewBox%3D%22-354%20-129.1%2026%20108%22%20enable-background%3D%22new%20-354%20-129.1%2026%20108%22%3E%3Cpath%20fill%3D%22%23ddd%22%20d%3D%22M-341-120.6c-2.6%200-4.8%201.9-4.8%205.2%200%203.3%201.8%206.7%204.8%206.7%203.2%200%204.8-3.4%204.8-6.7%200-3.3-2.2-5.2-4.8-5.2zm-4.8%2011.9c-2.6%200-4.8%202.1-4.8%204.7v2.2c0%20.2.1.2.2.2h18.5c.1%200%20.2-.1.2-.2v-2.1c0-2.7-2.1-4.8-4.8-4.8h-1.2c-.1%200-.3%200-.4.1-.9.7-2%201.1-3.1%201.1s-2.2-.3-3.1-1.1c-.1%200-.2-.2-.4-.2l-1.1.1z%22/%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M-341.2-101.7c-1.4-.9-3.1-1.1-4.4-1.1-.9%200-1.5.1-1.5.1l-.2.1v-8.8h.1s.5-.1%201.4-.1c1.3%200%203.1.2%204.6%201.1h.4c1.5-.9%203.3-1.1%204.6-1.1.8%200%201.3.1%201.4.1h.1v8.8h-.2s-.6-.1-1.4-.1c-1.2%200-3%20.2-4.4%201.1h-.1c.1-.1-.4-.1-.4-.1z%22/%3E%3Cpath%20fill%3D%22%23ddd%22%20d%3D%22M-336.2-111.4h1.3v8.5s-.6-.1-1.5-.1c-1.2%200-3%20.2-4.4%201.1h-.5c-1.4-.9-3.2-1.1-4.5-1.1-.9%200-1.4.1-1.4.1v-8.5h1.3c1.2%200%203.1.2%204.6%201h.5c1.5-.8%203.4-1%204.6-1m0-.3c-1.3%200-3.2.2-4.7%201.1h-.3c-1.5-.9-3.3-1.1-4.7-1.1-.8%200-1.4.1-1.4.1h-.2v9.1l.4-.1s.6-.1%201.4-.1c1.2%200%203%20.2%204.3%201v.1h.7l.1-.1c1.4-.8%203-1%204.3-1%20.9%200%201.4.1%201.4.1l.4.1v-9.1h-.2c-.2%200-.7-.1-1.5-.1zM-344.7-107.3l-.5-.2-.6.2v-4.1h1.1z%22/%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M-336.4-76.7c0-3-3.2-5.4-7.2-5.4s-7.2%202.4-7.2%205.4c0%201.8%201.1%203.4%203%204.3l-1.5%202.6%204.4-1.7c.5.1.9.1%201.3.1%204%20.1%207.2-2.3%207.2-5.3zm5.3%201.7c0-3-3-5.4-6.4-5.4%204.8%204.7-.8%209.8-5.4%209.8%200%200%20.5%201.1%204.5%201.1.5%200%20.9-.1%201.3-.1l4.4%201.7-1.5-2.6c2-1.1%203.1-2.7%203.1-4.5z%22/%3E%3Ccircle%20fill%3D%22%236A80A4%22%20cx%3D%22-343.6%22%20cy%3D%22-41%22%20r%3D%224.4%22/%3E%3Cg%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M-336.4-40.7c0-3-3.2-5.4-7.2-5.4s-7.2%202.4-7.2%205.4c0%201.8%201.1%203.4%203%204.3l-1.5%202.6%204.4-1.7c.5.1.9.1%201.3.1%204%20.1%207.2-2.3%207.2-5.3zm-4%201.9c.1.2.1.3%200%20.5l-.8.8c-.1.2-.4.2-.5%200l-2.1-2.1-2.1%202.1c-.1.2-.4.2-.5%200l-.8-.8c-.1-.2-.1-.3%200-.5l2.1-2.1-2.1-2.1c-.1-.2-.1-.3%200-.5l.8-.8c.1-.2.4-.2.5%200l2.1%202.1%202.1-2.1c.1-.2.4-.2.5%200l.8.8c.1.2.1.3%200%20.5l-2.1%202.1%202.1%202.1zM-331.1-39c0-3-3-5.3-6.4-5.4%204.8%204.7-.8%209.8-5.4%209.8%200%200%20.5%201.1%204.5%201.1.5%200%20.9-.1%201.3-.1l4.4%201.7-1.5-2.6c2-1.1%203.1-2.7%203.1-4.5z%22/%3E%3C/g%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  content: '';
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.libanswers-button:before {
+  background-position: 0 -8px;
+}
+
+.libanswers-button:hover {
+  text-decoration: none;
+}
+
+.libchat-button {
+  text-align: center;
+  width: 100%;
+}
+
+.libapps-buttons .libchat_online,
+.libapps-buttons .libchat_offline {
+  color: #ffffff !important;
+  display: inline-block !important;
+  padding: 0 15px !important;
+  text-align: center !important;
+}
+
+.libapps-buttons .libchat_online:hover,
+.libapps-buttons .libchat_offline:hover {
+  cursor: pointer !important;
+  background-color: #4f5f7a !important;
+}
+
+.libapps-buttons .libchat_online:focus,
+.libapps-buttons .libchat_offline:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.libapps-buttons .libchat_online::before {
+  background-position: 0 -45px;
+}
+
+.libapps-buttons .libchat_offline::before {
+  background-position: 0 -81px;
+}
+
+.ahsl-header-links {
+  position: relative;
+  top: 55%;
+  right: 2em;
+  margin: -14px 0 0;
+  padding: 0;
+  list-style-type: none;
+  clear: both;
+  display: none;
+  left: .5em;
+}
+
+@media (min-width: 36em) {
+  .ahsl-header-links {
+    top: 54%;
+    float: left;
+    display: block;
+    padding-top: 17px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .ahsl-header-links {
+    position: relative;
+    top: 18%;
+    right: 2em;
+    float: right;
+    clear: both;
+    display: block;
+    margin-top: 0;
+    margin-right: 35px;
+    font-size: 16px;
+  }
+}
+
+.ahsl-header-links li {
+  display: inline-block;
+}
+
+.ahsl-header-links li a {
+  color: #ffffff;
+  border-left: solid 1px #ffffff;
+  padding: 0 5px;
+}
+
+.ahsl-header-links li:first-child a {
+  border: 0;
+}
+
+
+/**
+ * LibAnswers
+ *
+ * Styles specific to the LibAnswers system.
+ */
+
+body[class^='s-la'] p {
+  margin: 1em 0;
+}
+
+body[class^='s-la'] :first-child,
+body[class^='s-la'] p:first-of-type {
+  margin-top: 0;
+  /* margin: 0; */
+}
+
+/* UA Library logo */
+.logobar__webpac {
+  background-color: #eeeeee;
+  padding: 5px 10px;
+}
+
+.logobar__webpac img {
+  max-width: 100%;
+  max-height: 65px;
+}
+
+@media (min-width: 992px) {
+  #s-la-page-maincontent {
+    padding: 0 25px;
+  }
+}
+
+#s-la-public-skiplink {
+  top: -45px;
+}
+
+/* Lose the gradients on all title bars */
+.s-la-color-bars {
+  background-image: none;
+}
+
+/* No background color on title bars for main content area and footer */
+#s-la-page-column-1 .s-la-color-bars,
+.breadcrumb.s-la-color-bars,
+.s-la-footer.s-la-color-bars {
+  background-color: transparent;
+}
+
+/* Remove the header text in favor of repeating it in a box when needed */
+#s-la-public-header {
+  padding: 0;
+}
+
+.s-la-public-header-text {
+  display: none;
+}
+
+/* Boxes placed in column 1 never get a border and the headers are stylized */
+#s-la-page-column-1 .s-la-box-container {
+  border: none;
+}
+
+#s-la-page-column-1 .s-la-box-title.s-la-color-bars,
+#s-la-page-column-1 .s-la-box-title.s-la-color-bars-border {
+  background-color: transparent;
+  background-image: none;
+}
+
+#s-la-page-column-1 .s-la-box-title h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#s-la-page-column-1 .s-la-box-title.s-li-color-bars-border {
+  border-color: #cccccc;
+}
+
+#s-la-page-column-1 .s-la-box-title {
+  border-width: 2px;
+  padding: 5px 10px;
+}
+
+/* Hide the built-in title bar in favor of recreating it with our own combination of items */
+#s-la-page-title-bar {
+  display: none;
+}
+
+/* Custom markup for the question and answer */
+h2.question {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.s-la-faq-answer {
+  font-size: 18px;
+}
+
+/* topic list */
+ul.s-la-content-topic-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Custom styles for breadcrumbs */
+#s-la-bc {
+  background-color: #f5f5f5;
+  border-bottom: solid 1px #eeeeee;
+  margin-bottom: 20px;
+}
+
+#s-la-page-column-1 div:first-child {
+  margin-top: 0;
+}
+
+/* Keep the header in a consistent place on all pages */
+
+.s-la-public-home.s-la-public-header-text {
+  text-align: left;
+}
+
+#s-la-public-footer-custom {
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+#s-la-public-footer-custom ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#s-la-public-footer-custom li {
+  display: inline-block;
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+#s-la-public-footer-custom ul:first-child li {
+  border-right: 1px solid #cccccc;
+}
+
+#s-la-public-footer-custom ul:first-child li:last-child {
+  border: none;
+}
+
+/* Visually hide question box label */
+.pquestion_wrap label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Remove the "more details" field entirely */
+.pdetails_wrap {
+  display: none;
+}
+
+/* Reduce padding inside the widget boxes */
+.s-la-box-content {
+  padding: 15px;
+}
+
+/* Get rid of box around submit buttons */
+.form-actions {
+  padding: 0;
+  margin-top: 0;
+  background-color: transparent;
+  border-top: 0;
+}
+
+#s-la-vote {
+  margin-left: 0;
+  margin-top: 15px;
+}
+
+/* Sidebar styles */
+
+#s-la-page-column-2 {
+  background-color: #f5f5f5;
+  padding: 5px 10px;
+}
+
+#s-la-page-column-2 .s-la-box-container {
+  border: 0;
+}
+
+#s-la-page-column-2 .s-la-box-container:last-child {
+  margin-bottom: 0;
+}
+
+#s-la-page-column-2 .s-la-box-title {
+  padding: 5px 10px;
+}
+
+#s-la-page-column-2 .s-la-box-title h2 {
+  font-size: 18px;
+}
+
+/* Icons */
+.s-la-content-iconitem-icon .fa {
+  width: 22px;
+  font-size: 22px;
+}
+
+a i {
+  color: #8daad3;
+}
+
+/* Chat button images */
+.s-la-page-column .libraryh3lp {
+  margin-left: -10px;
+  width: 150px;
+}
+
+.s-la-page-column .libraryh3lp img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms */
+.form-control {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+#s-la-page-column-2 fieldset legend {
+  font-size: 16px;
+}
+
+/**
+ * LibGuides specific styling
+ *
+ * These styles apply on system-wide or group homepages in LibGuides.
+ */
+
+/* Archive link on the UAL group home page */
+a.archive {
+  display: block;
+  float: right;
+  padding: 10px 0 15px;
+  font-weight: bold;
+}
+
+/* add some padding to containers */
+.s-lib-public-body #s-lib-public-header,
+.s-lib-public-body #s-lib-public-main {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#s-lg-hp-nav,
+#s-lg-hp-nav-bottom {
+  background: transparent;
+}
+
+.s-lib-public-body #s-lib-footer-public {
+  background-color: #f5f5f5;
+  border-top: 0;
+}
+
+.s-lib-public-body #s-lg-public-footer-custom {
+  padding: 15px;
+  background-color: #eeeeee;
+}
+
+.s-lib-public-body #s-lg-public-footer-custom ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.s-lib-public-body #s-lg-public-footer-custom li {
+  display: inline-block;
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+.s-lib-public-body #s-lg-public-footer-custom ul:first-child li {
+  border-right: 1px solid #cccccc;
+}
+
+.s-lib-public-body #s-lg-public-footer-custom ul:first-child li:last-child {
+  border: none;
+}
+
+#s-lg-srch-local .navbar-form {
+  margin-top: 8px;
+}
+
+#s-lg-guide-header-info {
+  padding-top: 1px;
+  clear: both;
+}
+
+.row {
+  margin: 0;
+}
