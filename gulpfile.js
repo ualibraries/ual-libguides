@@ -15,7 +15,7 @@ gulp.task('serve', () => {
       console.warning(err)
     }
 
-    console.log(`<script src="${tunnel.url}/"></script>`);
+    console.log(`Your local url is: ${tunnel.url}`);
   })
 
 
