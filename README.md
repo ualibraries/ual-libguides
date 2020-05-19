@@ -28,7 +28,10 @@ Run `npm install`
 
 `% npm run csscomb` - Runs [csscomb](http://csscomb.com/) on all css files.
 
-`% npm run deploy:prod` - Deploys the build from the `master` branch
+`% npm run deploy:prod` - Syncs the `dist` directory to the production AWS S3 bucket `ualibr-libguides-assets` using the 'default' profile. Append `-- <args>` to add arguments to the command. For example, to add an aws profile you would run:
+  ```
+  % npm run deploy:prod -- --profile <name_of_profile>
+  ```
 
 ## LibGuides settings
 
