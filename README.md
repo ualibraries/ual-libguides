@@ -48,3 +48,7 @@ In ['Admin' -> 'Look & Feel' -> 'Custom JS/CSS'](https://arizona.libapps.com/lib
 ### Groups
 
 Groups can be edited in 'Admin' -> 'Groups'. Edit a group's JS/CSS settings by choosing the 'Edit' icon for the specific group and going to 'Custom JS/CSS Code'.
+
+
+## Archived status
+This repository was archived in February 2026 due to no longer being in use for LibApps.
